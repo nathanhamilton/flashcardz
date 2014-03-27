@@ -1,0 +1,15 @@
+<h1>FlashCardz</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-3" data-ng-repeat='deck in data.decks'>
+          <div class="box">
+            <p>{{deck.name}}</p>
+            <a data-ng-href="#" class="btn btn-primary">Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
