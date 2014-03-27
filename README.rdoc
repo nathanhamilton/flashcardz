@@ -1,28 +1,11 @@
-== README
+== FlashCardz app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To begin run the following commands:
 
-Things you may want to cover:
+*rake db:create
 
-* Ruby version
+*rake db:migrate
 
-* System dependencies
+*rake db:buld_decks_and_cards
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+And you should be good to go!
