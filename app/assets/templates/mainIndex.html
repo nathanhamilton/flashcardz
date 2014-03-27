@@ -6,7 +6,7 @@
         <div class="col-md-3" data-ng-repeat='deck in data.decks'>
           <div class="box">
             <p>{{deck.name}}</p>
-            <a data-ng-href="#" class="btn btn-primary">Study</a>
+            <a class="btn btn-primary" data-ng-click="viewDeck(deck.id)">Study</a>
           </div>
         </div>
       </div>

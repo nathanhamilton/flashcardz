@@ -10,5 +10,7 @@
 FlashCardz = angular.module("FlashCardz", ['ngRoute'])
 
 FlashCardz.config(['$routeProvider', ($routeProvider) ->
+  $routeProvider.when('/decks/:deckId', { templateUrl: '../assets/mainDeckShow.html', controller: 'DeckController' })
   $routeProvider.otherwise({ templateUrl: '../assets/mainIndex.html', controller: 'IndexController' })
 ])
+
