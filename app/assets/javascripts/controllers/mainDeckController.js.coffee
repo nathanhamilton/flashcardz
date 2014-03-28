@@ -1,10 +1,9 @@
-@DeckController = ($scope, $routeParams, deckData) ->
+@DeckController = ($scope, $routeParams, cardData) ->
 
-  $scope.data =
-    deckData: deckData.data
+  $scope.data = cardData.data
 
-  deckData.loadDecks()
+  cardData.loadCards($routeParams.deckId)
 
   $scope.data.deckId = $routeParams.deckId
 
-@DeckController.$inject = ['$scope', '$routeParams', 'deckData']
+@DeckController.$inject = ['$scope', '$routeParams', 'cardData']

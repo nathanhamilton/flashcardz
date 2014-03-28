@@ -5,6 +5,6 @@
   deckData.loadDecks()
 
   $scope.viewDeck = (deckId) ->
-    $location.url('/deck/'+deckId)
+    $location.url('/decks/'+deckId)
 
-@IndexController.$inject = ['$scope', '$http', '$location', 'deckData']
+@IndexController.$inject = ['$scope', '$location', '$http', 'deckData']

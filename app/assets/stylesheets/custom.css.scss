@@ -19,6 +19,24 @@
   }
 }
 
-.green {
-  background-color: green;
+.card {
+  border: 2px solid black;
+  height: 700px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  position: absolute;
+  width: 100%;
+
+  &.is_previous {
+    left: -100%;
+  }
+
+  &.is_current {
+    left: 0;
+    z-index: 10;
+  }
+
+  &.is_next {
+    left: 100%;
+  }
 }
