@@ -9,6 +9,7 @@ angular.module('FlashCardz').factory('cardData', ['$http', ($http) ->
     if !cardData.isLoaded
       $http.get("/decks/#{deckId}.json").success( (data) ->
         cardData.data.cards = data
+        cardData.data.activeCard = data[0]
         isLoaded: true
         console.log ('Successfully loaded cards')
       ).error( ->

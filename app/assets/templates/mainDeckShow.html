@@ -1,8 +1,15 @@
 <h1>FlashCardz Card</h1>
 <div class="container">
-  <div data-ng-repeat="card in data.cards">
+  <div>
     <div class="card">
-      <p>{{ card.content }}</p>
+      <div data-card-view  >
+        <p> {{ data.cardData.activeCard.content }} </p>
+        <p> {{ data.cardData.activeCard.id }} </p>
+        <div class="buttons">
+          <a class="btn btn-info btn-lg move" data-direction="back">Back</a>
+          <a class="btn btn-warning btn-lg move" data-direction="next">Next</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

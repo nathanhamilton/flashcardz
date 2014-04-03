@@ -1,6 +1,7 @@
 @DeckController = ($scope, $routeParams, cardData) ->
 
-  $scope.data = cardData.data
+  $scope.data =
+    cardData: cardData.data
 
   cardData.loadCards($routeParams.deckId)
 
