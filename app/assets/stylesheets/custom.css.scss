@@ -25,6 +25,11 @@
 
 .buttons {
   margin-top: 100px;
+  a {
+    .hidden {
+      display: none;
+    }
+  }
 }
 
 .card {
