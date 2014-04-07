@@ -8,6 +8,6 @@
   $scope.data.deckId = $routeParams.deckId
 
   $scope.backToDecks = ->
-    $location.url('/decks/')
+    $location.url('/')
 
 @DeckController.$inject = ['$scope', '$routeParams', 'cardData', '$location']
