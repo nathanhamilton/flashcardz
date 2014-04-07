@@ -1,4 +1,4 @@
-@DeckController = ($scope, $routeParams, cardData) ->
+@DeckController = ($scope, $routeParams, cardData, $location) ->
 
   $scope.data =
     cardData: cardData.data
@@ -7,4 +7,7 @@
 
   $scope.data.deckId = $routeParams.deckId
 
-@DeckController.$inject = ['$scope', '$routeParams', 'cardData']
+  $scope.backToDecks = ->
+    $location.url('/decks/')
+
+@DeckController.$inject = ['$scope', '$routeParams', 'cardData', '$location']
