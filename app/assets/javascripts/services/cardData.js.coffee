@@ -1,4 +1,4 @@
-angular.module('FlashCardz').factory('cardData', ['$http', ($http) ->
+angular.module('FlashCardz').factory('cardData', ['$resource', '$http', ($resource, $http) ->
 
   cardData =
     data:
