@@ -12,5 +12,6 @@ gem 'zeus'
 gem 'bootstrap-sass'
 gem 'pry-rails', :group => :development
 gem 'better_errors'
+gem 'rails_12factor', group: :production
 
 ruby '2.1.0'
