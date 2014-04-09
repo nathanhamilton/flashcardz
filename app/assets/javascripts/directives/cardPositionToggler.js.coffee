@@ -2,8 +2,16 @@ angular.module('FlashCardz').directive 'cardPositionToggler', ->
 
   return (scope, element, attrs) ->
 
-    $('.box').each (i, obj) ->
-      console.log obj
+    $('#sortable').sortable
+      change: (event, ui) ->
+        position = ui.item.index()
+        scope.data.decks[position]
+      deactivate: (event, ui) ->
+        console.log ui.item.index()
 
-    # element.find('.box').on 'mouseover', ->
-    #   $('.box').hide()
+    $('.box')
+      .mouseenter ->
+        $(this).addClass('select')
+      .mouseleave ->
+        $(this).removeClass( 'select' )
+
