@@ -9,9 +9,6 @@ angular.module('FlashCardz').directive 'cardPositionToggler', ->
           type: 'POST'
           dataType: 'json'
           data: idArray
-          success: (data) ->
-            console.log 'AJAX Call was successful'
-          scope.$apply()
 
     $('.box')
       .mouseenter ->

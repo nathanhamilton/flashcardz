@@ -16,18 +16,15 @@ class DecksController < ApplicationController
   end
 
   def create
-    @deck_positions = params[:deck]
-    @decks = Deck.all
-    assign_positions(@deck_positions, @decks)
+    assign_positions(params[:deck])
+    render nothing: true, status: 204
   end
 
   private
 
-  def assign_positions(deck_positions, decks)
-    decks.each do |deck|
-      deck_positions.each do |number|
-        deck.position = number
-      end
+  def assign_positions(deck_ids)
+    deck_ids.each_with_index do |deck_id, index|
+      Deck.find(deck_id).update(position: index)
     end
   end
 end
