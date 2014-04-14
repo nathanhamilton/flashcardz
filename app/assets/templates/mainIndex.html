@@ -2,11 +2,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-3" data-ng-repeat='deck in data.decks'>
-          <div class="box">
-            <p>{{deck.name}}</p>
-            <a class="btn btn-primary" data-ng-click="viewDeck(deck.id)">Study</a>
+      <div class="row" id="sortable">
+        <div class="col-md-3" data-ng-repeat='deck in data.decks | orderBy : "+position"' id="deck_{{ deck.id }}">
+          <div data-card-position-toggler>
+            <div class="box" >
+              <p>{{ deck.name }}</p>
+              <a class="btn btn-primary" data-ng-click="viewDeck(deck.id)">Study</a>
+            </div>
           </div>
         </div>
       </div>

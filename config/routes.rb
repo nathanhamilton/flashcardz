@@ -1,5 +1,6 @@
 AngularRailsCards::Application.routes.draw do
   root to: "main#index"
 
-  resources :decks, only: [:index, :show]
+  match 'decks_positions', to: 'decks_positions#update', via: :post
+  resources :decks, only: [:index, :show, :create]
 end

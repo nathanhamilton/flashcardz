@@ -6,6 +6,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'coffee-script', '~> 2.2.0'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'rails', '4.0.4'
 gem 'pg'
 gem 'pry-rails', :group => :development

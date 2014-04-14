@@ -3,10 +3,10 @@ namespace :db do
   task build_decks_and_cards: :environment do
     decks = [
       'Ingenious',
-      'Smart',
-      'Studious',
       'IQ',
-      'Proficient'
+      'Proficient',
+      'Smart',
+      'Studious'
     ]
 
     card_type = [
@@ -38,7 +38,7 @@ namespace :db do
     puts "Starting the process of creating your decks and cards"
 
     decks.each do |name|
-      Deck.create name: name
+      Deck.create name: name, position: decks.index(name)
       card_type.each do |type|
         card_suit.each do |suit|
           Card.create content: type + " " + suit, deck_id: Deck.last.id
