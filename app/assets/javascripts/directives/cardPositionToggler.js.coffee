@@ -5,7 +5,7 @@ angular.module('FlashCardz').directive 'cardPositionToggler', ->
     $('#sortable').sortable
       update: (event, ui) ->
         idArray = $('#sortable').sortable('serialize')
-        $.ajax '/decks',
+        $.ajax '/decks_positions',
           type: 'POST'
           dataType: 'json'
           data: idArray
